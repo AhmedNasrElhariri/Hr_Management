@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../includes/head')%>
+  </head>
+<body>
+  <%- include('../includes/navigation')%>
+  <section id="container" class="" style="width: 1500px; margin: auto;">
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div style="width: 700px; margin: auto;">
+            <section class="panel">
+              <header class="panel-heading">
+                Add the working hours 
+              </header>
+              <div class="panel-body">
+                <form role="form" action="/admin/addWorkingHours" method="POST">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Date</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Date" name="date">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Attendence Time</label>
+                    <input type="time" class="form-control" id="exampleInputPassword1" placeholder="Attendence Time" name="attendenceTime">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Leave Time</label>
+                    <input type="time" class="form-control" id="exampleInputPassword1" placeholder="Leave Time" name="leaveTime">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">End of Break Time</label>
+                    <input type="time" class="form-control" id="exampleInputPassword1" placeholder="End of Break Time" name="endBreakTime">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">working Hours</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Working Hours" name="workingHours">
+                  </div>
+                  <div class="form-group">
+                    <input type="hidden"  name="employeeId" value="<%= employeeId %>">
+                  </div>
+                  
+                  <div class="checkbox">
+                    <label>
+                                          <input type="checkbox"> Check me out
+                                      </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+              </div>
+            </section>
+          </div>
+      </section> 
+    </section>
+  </section>
+  <%- include('../includes/end')%>
+</body>
+</html>
